@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Alan's Birthday</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}" type="text/css">
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-light navbar-expand">
+        <img id="logo" src="{{ url_for('static',filename='lion.jpg') }}">
+        <div class="dropdown" id="nav1">
+            <button class="dropbtn navbtn">Public Information</button>
+            <div class="dropdown-content">
+              <a href="/">Home</a>
+              <a href="/publicBoard">Public Board</a>
+              <a href="/createWallet">Create Your Own Wallet</a>
+              <a href="/code">Code</a>
+              <a href="/discordBot">Currency Bot</a>
+            </div>
+        </div>
+        <div class="dropdown" id="navLast">
+            <button class="dropbtn navbtn">Banking</button>
+            <div class="dropdown-content">
+              <a href="/transfer">Transfer Money</a>
+              <a href="/getBalance">Get Balance</a>
+              <a href="/getTransactionHistory">Get Transaction History</a>
+              <a href="/encryptMessage">Encrypt Message</a>
+              <a href="/decryptMessage">Decrypt Message</a>
+            </div>
+        </div>
+    </nav>
+    <div class="body">
+        <h1 id="pageName">Decrypt Message</h1>
+            <form action="/decryptMessage" method="post">
+              <label for="ciphertext">Ciphertext to Decrypt (as Hexadecimal):</label><br>
+              <textarea id="ciphertext" name="ciphertext" placeholder="ciphertext" rows=12 cols=75>0123456789abcdef</textarea><br>
+              <br>
+              <label for="decryptkey">Your Private Key for Decryption:</label><br>
+              <textarea id="decryptkey" name="decryptkey" placeholder="decryptkey" rows=10 cols=75>-----BEGIN RSA PRIVATE KEY-----</textarea><br>
+              <br>
+              <label for="signature">Signature to Verify (as Hexadecimal):</label><br>
+              <textarea id="signature" name="signature" placeholder="signature" rows=12 cols=75>0123456789abcdef</textarea><br>
+              <br>
+              <label for="verifykey">Sender's Public Key for Verifying the Signature:</label><br>
+              <textarea id="verifykey" name="verifykey" placeholder="verifykey" rows=10 cols=75>-----BEGIN RSA PUBLIC KEY-----</textarea><br>
+              <br>
+              <button type="submit">Decrypt</button>
+            </form>
+            <br>
+    </div>
+    <p class="summary footer">
+        Thank you for viewing my website!<br>
+        This is a for fun project I made for me and my friends<br>
+        Website made by Adam
+    </p>
+  </body>
+</html>

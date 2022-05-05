@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Alan's Birthday</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/static/lion.jpg">
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-light navbar-expand">
+        <img id="logo" src="{{ url_for('static',filename='lion.jpg') }}">
+        <div class="dropdown" id="nav1">
+            <button class="dropbtn navbtn">Public Information</button>
+            <div class="dropdown-content">
+              <a href="/">Home</a>
+              <a href="/publicBoard">Public Board</a>
+              <a href="/createWallet">Create Your Own Wallet</a>
+              <a href="/code">Code</a>
+              <a href="/discordBot">Currency Bot</a>
+            </div>
+        </div>
+        <div class="dropdown" id="navLast">
+            <button class="dropbtn navbtn">Banking</button>
+            <div class="dropdown-content">
+              <a href="/transfer">Transfer Money</a>
+              <a href="/getBalance">Get Balance</a>
+              <a href="/getTransactionHistory">Get Transaction History</a>
+              <a href="/encryptMessage">Encrypt Message</a>
+              <a href="/decryptMessage">Decrypt Message</a>
+            </div>
+        </div>
+    </nav>
+    <div class="body">
+        <h1 id="pageName">Code Making Adam's Centralized Cryptographic Currency Possible</h1>
+        <p>Find the code on <a href="https://github.com/AGKirby/CentralizedCryptographicCurrency">GitHub</a></p>
+        <p>Make your own application by copying the "ninshubur" file into your application and calling its public functions. 
+          Note that the library assumes you are hosting your application on <a href="https://replit.com">Replit</a>, but you can modify it to work anywhere.</p>
+    </div>
+    <p class="summary footer">
+        Thank you for viewing my website!<br>
+        This is a for fun project I made for me and my friends<br>
+        Website made by Adam
+    </p>
+  </body>
+</html>
